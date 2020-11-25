@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {colors} from '../../../../utils';
+import {colors, fonts} from '../../../../utils';
 
 const Button = ({title, type, onPress, icon}) => {
   if (type === 'icon-only') {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   }),
 
   title: (type) => ({
-    fontFamily: 'NunitoSans-SemiBold',
+    fontFamily: fonts.primary[600],
     fontSize: 18,
     color:
       type === 'secondary'

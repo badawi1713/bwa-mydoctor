@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
 import {ICLogo} from '../../../assets';
-import {colors} from '../../../utils';
+import {colors, fonts} from '../../../utils';
 import {Button, Gap, Input, Link} from '../../components/atoms';
 
 const Login = ({navigation}) => {
@@ -15,7 +15,7 @@ const Login = ({navigation}) => {
       <Gap height={10} />
       <Link title="Forgot Password" fontSize={12} />
       <Gap height={40} />
-      <Button title="Sign In" />
+      <Button title="Sign In" onPress={() => navigation.replace('MainApp')} />
       <Gap height={30} />
       <Link
         title="Create New Account"
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'NunitoSans-SemiBold',
+    fontFamily: fonts.primary[600],
     color: colors.text.primary,
     marginVertical: 40,
     maxWidth: 153,

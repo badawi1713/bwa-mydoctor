@@ -2,7 +2,7 @@ import React from 'react';
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import {ICLogo} from '../../../assets/icons';
 import {ILGetStarted} from '../../../assets/illustrations';
-import {colors} from '../../../utils';
+import {colors, fonts} from '../../../utils';
 import {Button, Gap} from '../../components/atoms';
 
 const GetStarted = ({navigation}) => {
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontFamily: 'NunitoSans-SemiBold',
+    fontFamily: fonts.primary[600],
     marginTop: 90,
     color: colors.white,
   },

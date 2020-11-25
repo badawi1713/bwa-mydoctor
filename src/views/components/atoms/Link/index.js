@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {colors} from '../../../../utils';
+import {colors, fonts} from '../../../../utils';
 
 const Link = ({title, fontSize, textAlign, onPress}) => {
   return (
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   link: (fontSize, textAlign) => ({
     fontSize: fontSize,
     color: colors.text.secondary,
-    fontFamily: 'NunitoSans-Regular',
+    fontFamily: fonts.primary.normal,
     textDecorationLine: 'underline',
     textAlign: textAlign,
   }),

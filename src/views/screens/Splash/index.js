@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
 import {ICLogo} from '../../../assets';
-import {colors} from '../../../utils';
+import {colors, fonts} from '../../../utils';
 const Splash = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: 20,
-    fontFamily: 'NunitoSans-SemiBold',
+    fontFamily: fonts.primary[600],
     fontSize: 20,
     lineHeight: 27,
     color: colors.text.primary,
