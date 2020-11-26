@@ -1,5 +1,6 @@
 import ICLogo from './logo.svg';
 import ICBackArrow from './back-arrow.svg';
+import ICBackArrowLight from './back-arrow-light.svg';
 import ICAddButton from './add-button.svg';
 import ICRemoveButton from './remove-button.svg';
 import ICDoctor from './doctor-icon.svg';
@@ -13,7 +14,9 @@ import ICDokterAnak from './dokter-anak.svg';
 import ICFarmasi from './farmasi.svg';
 import ICPsikiater from './psikiater.svg';
 import ICStar from './star-icon.svg';
-
+import ICRightArrow from './right-arrow.svg';
+import ICSend from './send-icon.svg';
+import ICSendDisabled from './send-icon-disabled.svg';
 export {
   ICLogo,
   ICBackArrow,
@@ -30,4 +33,8 @@ export {
   ICFarmasi,
   ICPsikiater,
   ICStar,
+  ICRightArrow,
+  ICBackArrowLight,
+  ICSend,
+  ICSendDisabled,
 };

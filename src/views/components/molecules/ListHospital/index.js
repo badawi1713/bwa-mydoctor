@@ -1,18 +1,16 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {ILHospital1, ILNullPhoto} from '../../../../assets';
+import {ILHospital1} from '../../../../assets';
 import {colors, fonts} from '../../../../utils';
 
-const ListHospital = () => {
+const ListHospital = ({type, name, address}) => {
   return (
     <View style={styles.container}>
       <Image source={ILHospital1} style={styles.hospitalImage} />
       <View>
-        <Text style={styles.name}>Rumah Sakit</Text>
-        <Text style={styles.name}>Restu Ibu</Text>
-        <Text style={styles.address}>
-          Jl. Sukun No. 2A, Banguntapan, Bantul
-        </Text>
+        <Text style={styles.name}>{type}</Text>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.address}>{address}</Text>
       </View>
     </View>
   );
@@ -38,7 +36,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: fonts.primary.normal,
     color: colors.text.primary,
-    width: '90%',
   },
   address: {
     fontSize: 12,

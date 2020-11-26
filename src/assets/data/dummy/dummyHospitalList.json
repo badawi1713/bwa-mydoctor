@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "type": "Rumah Sakit Umum",
+            "name": "Citra Bunga Merdeka",
+            "address": "Jln. Surya Sejahtera, Jakarta",
+        },
+        {
+            "id": 2,
+            "type": "Rumah Sakit Anak",
+            "name": "Happy Family & Kids",
+            "address": "Jln. Sehat, Jakarta"
+        },
+        {
+            "id": 3,
+            "type": "Rumah Sakit Jiwa",
+            "name": "Golden Gate",
+            "address": "Jln. Jeruk No. 3, Jakarta"
+        }
+    ]
+}

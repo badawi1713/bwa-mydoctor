@@ -1,19 +1,20 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {ILNullPhoto} from '../../../../assets';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {ICRightArrow, ILNullPhoto} from '../../../../assets';
 import {colors, fonts} from '../../../../utils';
 
-const ListDoctor = () => {
+const ListDoctor = ({type, onPress}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
       <Image source={ILNullPhoto} style={styles.avatarImage} />
-      <View>
+      <View style={styles.wrapper}>
         <Text style={styles.name}>dr. John Doe</Text>
         <Text style={styles.messageText}>
           Yes you can call me on Saturday night...
         </Text>
       </View>
-    </View>
+      {type === 'next' && <ICRightArrow />}
+    </TouchableOpacity>
   );
 };
 
@@ -26,6 +27,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: colors.border,
     alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  wrapper: {
+    flex: 1,
   },
   avatarImage: {
     width: 46,

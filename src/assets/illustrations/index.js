@@ -5,6 +5,8 @@ import ILNewsItem2 from './news-2.png';
 import ILNewsItem3 from './news-3.png';
 import ILHospitalBackground from './hospital-bg.png';
 import ILHospital1 from './hospital-1.png';
+import ILHospital2 from './hospital-1.png';
+import ILHospital3 from './hospital-1.png';
 
 export {
   ILGetStarted,
@@ -14,4 +16,6 @@ export {
   ILNewsItem3,
   ILHospitalBackground,
   ILHospital1,
+  ILHospital2,
+  ILHospital3,
 };

@@ -1,9 +1,8 @@
 import React from 'react';
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
-import {ILHospitalBackground} from '../../../assets';
+import {ILHospitalBackground, JSONHospitalList} from '../../../assets';
 import {fonts, colors} from '../../../utils';
 import {ListHospital} from '../../components/molecules';
-
 const Hospital = () => {
   return (
     <View style={styles.container}>
@@ -14,9 +13,14 @@ const Hospital = () => {
         <Text style={styles.hospitalCount}>3</Text>
       </ImageBackground>
       <View style={styles.content}>
-        <ListHospital />
-        <ListHospital />
-        <ListHospital />
+        {JSONHospitalList.data.map((item) => (
+          <ListHospital
+            key={item.id}
+            address={item.address}
+            name={item.name}
+            type={item.type}
+          />
+        ))}
       </View>
     </View>
   );

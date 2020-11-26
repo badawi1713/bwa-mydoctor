@@ -7,6 +7,8 @@ import Hospital from './Hospital';
 import Doctor from './Doctor';
 import Message from './Message';
 import ListDoctor from '../components/molecules/ListDoctor';
+import ChooseDoctor from './ChooseDoctor';
+import Chat from './Chat';
 export {
   Splash,
   GetStarted,
@@ -17,4 +19,6 @@ export {
   Message,
   Hospital,
   ListDoctor,
+  ChooseDoctor,
+  Chat,
 };

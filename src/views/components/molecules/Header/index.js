@@ -1,15 +1,26 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {ICBackArrow} from '../../../../assets/icons';
+import {ICBackArrow, ICBackArrowLight} from '../../../../assets/icons';
 import {colors, fonts} from '../../../../utils';
 import {Button, Gap} from '../../atoms';
+import DarkProfile from './DarkProfile';
 
-const Header = ({title, onPress}) => {
+const Header = ({title, onPress, type}) => {
+  if (type === 'dark-profile') {
+    return <DarkProfile onPress={onPress} />;
+  }
   return (
-    <View style={styles.container}>
-      <Button type="icon-only" onPress={onPress} icon={<ICBackArrow />} />
-
-      <Text style={styles.text}>{title}</Text>
+    <View style={styles.container(type)}>
+      {type === 'dark' ? (
+        <Button
+          type="icon-only"
+          onPress={onPress}
+          icon={<ICBackArrowLight />}
+        />
+      ) : (
+        <Button type="icon-only" onPress={onPress} icon={<ICBackArrow />} />
+      )}
+      <Text style={styles.text(type)}>{title}</Text>
       <Gap width={24} />
     </View>
   );
@@ -18,18 +29,20 @@ const Header = ({title, onPress}) => {
 export default Header;
 
 const styles = StyleSheet.create({
-  container: {
+  container: (type) => ({
     paddingVertical: 30,
     paddingHorizontal: 16,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: colors.white,
-  },
-  text: {
+    backgroundColor: type === 'dark' ? colors.secondary : colors.white,
+    borderBottomLeftRadius: type === 'dark' ? 20 : 0,
+    borderBottomRightRadius: type === 'dark' ? 20 : 0,
+  }),
+  text: (type) => ({
     textAlign: 'center',
     flex: 1,
     fontFamily: fonts.primary[600],
     fontSize: 20,
-    color: colors.text.primary,
-  },
+    color: type === 'dark' ? colors.white : colors.text.primary,
+  }),
 });

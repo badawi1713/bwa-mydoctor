@@ -1,16 +1,36 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {colors} from '../../../../utils/colors';
-import {ICDokterUmum} from '../../../../assets';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {
+  ICDokterAnak,
+  ICDokterUmum,
+  ICFarmasi,
+  ICPsikiater,
+} from '../../../../assets';
 import {fonts} from '../../../../utils';
+import {colors} from '../../../../utils/colors';
 
-const DoctorCategory = () => {
+const DoctorCategory = ({category, onPress}) => {
+  const Icon = () => {
+    if (category === 'dokter umum') {
+      return <ICDokterUmum style={styles.icon} />;
+    }
+    if (category === 'psikiater') {
+      return <ICPsikiater style={styles.icon} />;
+    }
+    if (category === 'dokter anak') {
+      return <ICDokterAnak style={styles.icon} />;
+    }
+    if (category === 'farmasi') {
+      return <ICFarmasi style={styles.icon} />;
+    }
+    return <ICDokterUmum style={styles.icon} />;
+  };
   return (
-    <View style={styles.container}>
-      <ICDokterUmum style={styles.icon} />
+    <TouchableOpacity onPress={onPress} style={styles.container}>
+      <Icon />
       <Text style={styles.label}>Saya Butuh</Text>
-      <Text style={styles.category}>dokter umum</Text>
-    </View>
+      <Text style={styles.category}>{category}</Text>
+    </TouchableOpacity>
   );
 };
 
