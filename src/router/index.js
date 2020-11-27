@@ -12,6 +12,9 @@ import {
   Doctor,
   ChooseDoctor,
   Chat,
+  UserProfile,
+  UpdateProfile,
+  DoctorProfile,
 } from '../views/screens';
 import {BottomNavigator} from '../views/components';
 
@@ -29,7 +32,7 @@ const MainApp = () => {
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="MainApp">
+    <Stack.Navigator initialRouteName="Splash">
       <Stack.Screen
         options={{headerShown: false}}
         name="Splash"
@@ -69,6 +72,21 @@ const Router = () => {
         options={{headerShown: false}}
         name="Chat"
         component={Chat}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="UserProfile"
+        component={UserProfile}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="UpdateProfile"
+        component={UpdateProfile}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="DoctorProfile"
+        component={DoctorProfile}
       />
     </Stack.Navigator>
   );

@@ -20,9 +20,17 @@ const UploadPhoto = ({navigation}) => {
           <Text style={styles.jobDescription}>Web Developer</Text>
         </View>
         <View>
-          <Button title="Upload and Continue" />
+          <Button
+            onPress={() => navigation.replace('MainApp')}
+            title="Upload and Continue"
+          />
           <Gap height={30} />
-          <Link title="Skip for this" textAlign="center" fontSize={16} />
+          <Link
+            title="Skip for this"
+            textAlign="center"
+            onPress={() => navigation.replace('MainApp')}
+            fontSize={16}
+          />
         </View>
       </View>
     </View>

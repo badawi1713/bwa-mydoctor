@@ -6,9 +6,12 @@ import UploadPhoto from './UploadPhoto';
 import Hospital from './Hospital';
 import Doctor from './Doctor';
 import Message from './Message';
-import ListDoctor from '../components/molecules/ListDoctor';
+import List from '../components/molecules/List';
 import ChooseDoctor from './ChooseDoctor';
 import Chat from './Chat';
+import UserProfile from './UserProfile';
+import UpdateProfile from './UpdateProfile';
+import DoctorProfile from './DoctorProfile';
 export {
   Splash,
   GetStarted,
@@ -18,7 +21,10 @@ export {
   Doctor,
   Message,
   Hospital,
-  ListDoctor,
+  List,
   ChooseDoctor,
   Chat,
+  UserProfile,
+  UpdateProfile,
+  DoctorProfile,
 };

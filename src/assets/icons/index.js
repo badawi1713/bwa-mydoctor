@@ -17,6 +17,15 @@ import ICStar from './star-icon.svg';
 import ICRightArrow from './right-arrow.svg';
 import ICSend from './send-icon.svg';
 import ICSendDisabled from './send-icon-disabled.svg';
+
+import ICUser from './user-icon.svg';
+import ICLanguage from './language-icon.svg';
+import ICStarOutline from './star-outline-icon.svg';
+import ICHelp from './document-icon.svg';
+
+import ICMale from './male-icon.svg';
+import ICFemale from './female-icon.svg';
+
 export {
   ICLogo,
   ICBackArrow,
@@ -37,4 +46,10 @@ export {
   ICBackArrowLight,
   ICSend,
   ICSendDisabled,
+  ICUser,
+  ICLanguage,
+  ICStarOutline,
+  ICHelp,
+  ICMale,
+  ICFemale,
 };

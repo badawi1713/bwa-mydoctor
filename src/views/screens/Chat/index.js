@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import {colors, fonts} from '../../../utils';
 import {ChatDialogue, ChatInput, Header} from '../../components';
 
@@ -11,12 +11,19 @@ const Chat = ({navigation}) => {
         title="dr. John Doe"
         onPress={() => navigation.goBack()}
       />
-      <View style={styles.content}>
-        <Text style={styles.chatDate}>Senin, 30 November 2020</Text>
-        <ChatDialogue isMe />
-        <ChatDialogue />
-        <ChatDialogue isMe />
-      </View>
+      <ScrollView>
+        <View style={styles.content}>
+          <Text style={styles.chatDate}>Senin, 30 November 2020</Text>
+          <ChatDialogue isMe />
+          <ChatDialogue />
+          <ChatDialogue isMe />
+          <ChatDialogue />
+          <ChatDialogue isMe />
+          <ChatDialogue />
+          <ChatDialogue isMe />
+          <ChatDialogue />
+        </View>
+      </ScrollView>
       <ChatInput />
     </View>
   );

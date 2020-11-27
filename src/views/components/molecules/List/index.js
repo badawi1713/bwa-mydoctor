@@ -3,22 +3,20 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {ICRightArrow, ILNullPhoto} from '../../../../assets';
 import {colors, fonts} from '../../../../utils';
 
-const ListDoctor = ({type, onPress}) => {
+const List = ({name, type, onPress, desc, icon}) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
-      <Image source={ILNullPhoto} style={styles.avatarImage} />
+      {icon ? icon : <Image source={ILNullPhoto} style={styles.avatarImage} />}
       <View style={styles.wrapper}>
-        <Text style={styles.name}>dr. John Doe</Text>
-        <Text style={styles.messageText}>
-          Yes you can call me on Saturday night...
-        </Text>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.messageText}>{desc}</Text>
       </View>
       {type === 'next' && <ICRightArrow />}
     </TouchableOpacity>
   );
 };
 
-export default ListDoctor;
+export default List;
 
 const styles = StyleSheet.create({
   container: {
@@ -31,12 +29,12 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     flex: 1,
+    marginLeft: 16,
   },
   avatarImage: {
     width: 46,
     height: 46,
     borderRadius: 46 / 2,
-    marginRight: 12,
   },
   name: {
     fontSize: 16,

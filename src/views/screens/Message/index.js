@@ -2,17 +2,29 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {colors, fonts} from '../../../utils';
-import ListDoctor from '../../components/molecules/ListDoctor';
+import List from '../../components/molecules/List';
 
-const Message = () => {
+const Message = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>Messages</Text>
         <ScrollView>
-          <ListDoctor />
-          <ListDoctor />
-          <ListDoctor />
+          <List
+            onPress={() => navigation.navigate('Chat')}
+            name="dr. Carlos Doe"
+            desc="Ofcourse dude anytime..."
+          />
+          <List
+            onPress={() => navigation.navigate('Chat')}
+            name="dr. John Reed"
+            desc="Nah it's fine"
+          />
+          <List
+            onPress={() => navigation.navigate('Chat')}
+            name="dr. Nina Cooper"
+            desc="Tomorrow right?"
+          />
         </ScrollView>
       </View>
     </View>

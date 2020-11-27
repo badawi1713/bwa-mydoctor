@@ -15,11 +15,10 @@ const Doctor = ({navigation}) => {
       <ScrollView showsVerticalScrollIndicator={false} style={styles.content}>
         <View style={styles.wrapperSection}>
           <Gap height={30} />
-          <HomeProfile />
+          <HomeProfile onPress={() => navigation.navigate('UserProfile')} />
           <Text style={styles.welcomeText}>
             Mau konsultasi dengan siapa hari ini?
           </Text>
-
           <View style={styles.scrollContainer}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={styles.category}>
@@ -37,15 +36,32 @@ const Doctor = ({navigation}) => {
           </View>
         </View>
         <View style={styles.wrapperSection}>
+          <Gap height={30} />
+
           <Text style={styles.sectionLabel}>Top Rated Doctors</Text>
-          <RatedDoctor />
-          <RatedDoctor />
-          <RatedDoctor />
+          <RatedDoctor
+            name="dr. Mike Richard"
+            category="dokter Anak"
+            onPress={() => navigation.navigate('DoctorProfile')}
+          />
+          <RatedDoctor
+            name="dr. Otto Wyle"
+            category="dokter Gigi"
+            onPress={() => navigation.navigate('DoctorProfile')}
+          />
+          <RatedDoctor
+            name="dr. Alya Rachet"
+            category="psikiater"
+            onPress={() => navigation.navigate('DoctorProfile')}
+          />
+          <Gap height={14} />
+
           <Text style={styles.sectionLabel}>Good News</Text>
         </View>
-
         <NewsItem />
+        <Gap height={16} />
         <NewsItem />
+        <Gap height={16} />
         <NewsItem />
         <Gap height={30} />
       </ScrollView>
@@ -87,7 +103,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: fonts.primary[600],
     color: colors.text.primary,
-    marginTop: 30,
     marginBottom: 16,
   },
 });
